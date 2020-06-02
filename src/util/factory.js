@@ -35,9 +35,7 @@ const plotRadar = function (title, blips, currentRadarName, alternativeRadars) {
   var maxRings = 5
 
   _.each(rings, function (ringName, i) {
-    console.log(ringName);
     if (i === maxRings) {
-      console.log("i === maxRings -- "+i+" === "+maxRings)
       throw new MalformedDataError(ExceptionMessages.TOO_MANY_RINGS)
     }
     ringMap[ringName] = new Ring(ringName, i)

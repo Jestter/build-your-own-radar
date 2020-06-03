@@ -1,5 +1,7 @@
 FROM node:10.15.3 as source
 WORKDIR /src/build-your-own-radar
+ARG NO_GOOGLE_AUTH=false
+ENV SKIP_GOOGLE_AUTH=$NO_GOOGLE_AUTH
 COPY package.json ./
 RUN npm install
 COPY . ./
